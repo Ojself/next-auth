@@ -29,7 +29,7 @@ const uri = process.env.MONGODB_URI
 const options = {}
 
 let client
-let clientPromise: Promise<MongoClient>
+let clientPromise = MongoClient;
 
 if (process.env.NODE_ENV === 'development') {
   // In development mode, use a global variable so that the value
